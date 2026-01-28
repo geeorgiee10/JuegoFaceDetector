@@ -10,8 +10,8 @@ public class TrackSpawner : MonoBehaviour
     public int initialPieces = 5;
     public float pieceLength = 10f;
     public float speed = 2f;
-    public float obstacleChance = 0.3f;
-    public float collectibleChance = 0.1f;
+    public float obstacleChance = 0.9f;
+    public float collectibleChance = 0.8f;
 
     private Queue<GameObject> trackQueue = new Queue<GameObject>();
     private float spawnZ = 0f;
