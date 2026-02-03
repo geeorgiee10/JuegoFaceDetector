@@ -8,7 +8,7 @@ public class TrackSpawner : MonoBehaviour
     public GameObject collectiblePrefab;
 
     public int initialPieces = 5;
-    public float pieceLength = 10f;
+    public float pieceLength = 1f;
     public float speed = 2f;
     public float obstacleChance = 0.9f;
     public float collectibleChance = 0.8f;
@@ -29,6 +29,7 @@ public class TrackSpawner : MonoBehaviour
         foreach (GameObject piece in trackQueue)
         {
             piece.transform.Translate(Vector3.back * speed * Time.deltaTime);
+
         }
 
 
@@ -71,7 +72,7 @@ public class TrackSpawner : MonoBehaviour
 
     float SpawnObstacle(Transform parent)
     {
-        float[] lanes = { -0.5f, 0f, 0.5f };
+        float[] lanes = { -0.5f, -0.3f, 0f, 0.3f, 0.5f };
         float x = lanes[Random.Range(0, lanes.Length)];
 
         GameObject obstacle = Instantiate(obstaclePrefab);
@@ -82,7 +83,7 @@ public class TrackSpawner : MonoBehaviour
 
     void SpawnCollectible(Transform parent, float? occupiedLane)
     {
-        List<float> lanes = new List<float> { -0.5f, 0f, 0.5f };
+        List<float> lanes = new List<float> { -0.5f, -0.3f, 0f, 0.3f, 0.5f };
 
         if (occupiedLane.HasValue)
             lanes.Remove(occupiedLane.Value);

@@ -604,10 +604,10 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 4084755170222708957, guid: a34a1fb6671650c4fa107d8d42599b86, type: 3}
   collectiblePrefab: {fileID: 5321371200735406646, guid: 68aab35943d8aa84dba47735b085fd1b, type: 3}
   initialPieces: 5
-  pieceLength: 10
+  pieceLength: 3
   speed: 2
-  obstacleChance: 0.5
-  collectibleChance: 0.3
+  obstacleChance: 0.9
+  collectibleChance: 0.8
 --- !u!1 &380539064
 GameObject:
   m_ObjectHideFlags: 0
